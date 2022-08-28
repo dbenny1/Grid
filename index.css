@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 13px;
+}
+:root {
+    --drkGrayBlue: hsl(217, 19%, 35%);
+    --drkBlackBlue: hsl(219, 29%, 14%);
+    --violet: hsl(263, 55%, 52%);
+    --lghtGray: hsl(0, 0%, 81%);
+    --lghtGrayBlue: hsl(210, 46%, 95%);
+    --fntBarlow: 'Barlow Semi Condensed', sans-serif;
+}
+body {
+    background-color: var(--lghtGrayBlue);
+    padding: 6em 2em;
+}
+.main-container {
+    display: grid;
+    gap: 2.5em;
+    font-family: var(--fntBarlow);
+}
+.container {
+    padding: 3em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgb(184, 184, 184);
+}
+.one {
+    background-color: var(--violet);
+    position: relative;
+}
+.two {
+    background-color: var(--drkGrayBlue);
+}
+.four {
+    background-color: var(--drkBlackBlue);
+}
+.one, .two, .four {
+    color: white;
+}
+.three, .five {
+    background-color: white;
+    font-weight: 600;
+    color: var(--drkBlackBlue);
+}
+.quotes {
+    position: absolute;
+    right: 95px;
+    top: 1px;
+    z-index: 1;
+    width: 120px;
+    border-radius: 0;
+}
+img {
+    width: 30px;
+    border-radius: 50%;
+    margin-bottom: -4px;
+}
+.daniel {
+    border: 2px solid rgb(194, 163, 191);
+}
+.four img {
+    border: 2px solid rgba(182, 51, 182, 0.829);
+}
+.name {
+    display: inline-block;
+    margin-left: 0.8em;
+}
+.nmBold {
+    font-weight: 700;
+}
+.nmContent {
+    opacity: 70%;
+}
+.bold {
+    font-weight: 700;
+    font-size: 1.7rem;
+    margin: 0.9em 0;
+    line-height: 2.2rem;
+    position: relative;
+    z-index: 2;
+}
+.content {
+    line-height: 1.8rem;
+    opacity: 70%;
+}
+
+@media (min-width: 720px) {
+    .main-container {
+        padding: 6em 10em;
+    }
+}
+
+@media (min-width: 1120px) {
+    body {
+        margin: 0;
+        padding: 8em;
+    }
+    .main-container {
+        padding: 1px;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 2em;
+    }
+    .gridOne {
+        grid-column: span 2;
+        height: 280px;
+        min-height: 280px;
+    }
+    .gridTwo {
+        min-height: 280px;
+    }
+    .gridThree {
+        grid-row: 2;
+        height: 280px;
+    }
+    .gridFour {
+        grid-row: 2;
+        grid-column: span 2;
+        height: 280px;
+        min-height: 280px;
+    }
+    .gridFive {
+        grid-row: 1 / span 2;
+        grid-column: 4;
+        height: 550px;
+        min-height: 550px;
+    }
+}
